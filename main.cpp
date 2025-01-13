@@ -28,6 +28,7 @@ int main(int argc, char* argv[]) {
             grid.y.push_back(j * 8);
         }
     }
+
     const int MAX = (argc > 3) ? atoi(argv[3]) : HI(RWIDTH / 4, RHEIGHT / 4);
 
     struct C {
