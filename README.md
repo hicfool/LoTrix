@@ -14,7 +14,7 @@ Font made by me.
     KEY_F -------------> Toggle fullscreen
 ```
 ```
-(These were running 512x288 with 128 [max_amount] on a 1920x1080 screen)
+(Both were 512x288 with 128 [max_amount] on a 1920x1080 screen)
 Rainbow -> false:
 ```
 ![image](preview1.png)
