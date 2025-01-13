@@ -15,13 +15,13 @@ Font made by me.
 ```
 ```
 Previews:
-    These were running 512x288 [widthxheight] with 128 [max_amount] on a 1920x1080 screen.
+    These were running 512x288 with 128 [max_amount] on a 1920x1080 screen.
 ```
 ```
-rainbow -> false
+Rainbow -> false:
 ```
 ![image](preview1.png)
 ```
-rainbow -> true
+Rainbow -> true:
 ```
 ![image](preview2.png)
