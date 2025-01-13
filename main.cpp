@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
     struct C {
         float x, y, speed, delay;
         char type[2];
-        int tail, r, g, b;
+        int r, g, b;
     }; struct C c[MAX];
 
     for (int i = 0; i < MAX; i++) {
@@ -44,7 +44,6 @@ int main(int argc, char* argv[]) {
         c[i].delay = 1;
         c[i].type[0] = { 32 + rand() % 95 };
         c[i].type[1] = '\0';
-        c[i].tail = 2 + rand() % 8;
 
         if (argc > 4 && std::string(argv[4]) == "true") {
             c[i].r = rand() % 256;
@@ -69,14 +68,11 @@ int main(int argc, char* argv[]) {
 
                     for (int i = 0; i < MAX; i++) {
                         DrawRectangle(c[i].x, c[i].y, 7, 7, Color { 0, 0, 0, 255 });
-                        DrawRectangle(c[i].x, c[i].y, 7, 7, Color { c[i].r, c[i].g, c[i].b, 20 * c[i].tail });
-
-                        for (int j = 0; j < c[i].tail; j++) {
-                            DrawRectangle(c[i].x, c[i].y - 8 - j * 8, 7, 7, Color { 0, 0, 0, 255 });
-                            DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y - 8 - j * 8 }, 8, 0, Color { c[i].r, c[i].g, c[i].b, std::clamp(255 - j * 32, 0, 255) });
-                        }
-
+                        DrawRectangle(c[i].x, c[i].y, 7, 7, Color { c[i].r, c[i].g, c[i].b, 25 + rand() % 50 });
+                        DrawRectangle(c[i].x, c[i].y - 8, 7, 7, Color { 0, 0, 0, 255 });
+                        DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y - 8 }, 8, 0, Color { c[i].r, c[i].g, c[i].b, 255 });
                         DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y }, 8, 0, WHITE);
+
                         c[i].delay -= GetFrameTime() * c[i].speed;
 
                         if (c[i].delay <= 0) {
@@ -85,7 +81,7 @@ int main(int argc, char* argv[]) {
                             c[i].delay = 1;
                         }
 
-                        if (c[i].y - c[i].tail * 8 + 8 > RHEIGHT) {
+                        if (c[i].y - 8 > RHEIGHT) {
                             c[i].x = grid.x[rand() % RWIDTH / 8];
                             c[i].y = grid.y[rand() % RHEIGHT / 8] - RHEIGHT;
 
@@ -96,6 +92,8 @@ int main(int argc, char* argv[]) {
                             }
                         }
                     }
+                } else {
+                    ClearBackground(Color { 0, 0, 0, 0 });
                 }
         EndTextureMode();
         BeginDrawing();
