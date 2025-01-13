@@ -1,12 +1,16 @@
 #include <raylib.h>
 #include <vector>
-#include <stdlib.h>
-#include <time.h>
+#include <random>
 #include <string>
 #include <algorithm>
 
 #define LO(a, b) (a < b) ? a : b
 #define HI(a, b) (a > b) ? a : b
+
+int genRand(int min, int max, std::mt19937& gen) {
+    std::uniform_int_distribution<> dis(min, max);
+    return dis(gen);
+}
 
 int main(int argc, char* argv[]) {
     const int RWIDTH = (argc > 1) ? atoi(argv[1]) : 128;
@@ -19,7 +23,8 @@ int main(int argc, char* argv[]) {
 	RenderTexture2D surface = LoadRenderTexture(RWIDTH, RHEIGHT);
 	SetTextureFilter(surface.texture, TEXTURE_FILTER_POINT);
     Font font = LoadFont("font.png");
-    srand(time(NULL));
+    std::random_device rd;
+    std::mt19937 gen(rd());
 
     struct Grid { std::vector<int>x, y; }; struct Grid grid;
     for (int i = 0; i < RWIDTH / 8; i++) {
@@ -38,17 +43,17 @@ int main(int argc, char* argv[]) {
     }; struct C c[MAX];
 
     for (int i = 0; i < MAX; i++) {
-        c[i].x = grid.x[rand() % RWIDTH / 8];
-        c[i].y = grid.y[rand() % RHEIGHT / 8] - RHEIGHT;
-        c[i].speed = 8 + rand() % 32;
+        c[i].x = grid.x[genRand(0, RWIDTH / 8, gen)];
+        c[i].y = grid.y[genRand(0, RHEIGHT / 8, gen)] - RHEIGHT;
+        c[i].speed = genRand(8, 32, gen);
         c[i].delay = 1;
-        c[i].type[0] = { 32 + rand() % 95 };
+        c[i].type[0] = { genRand(32, 127, gen) };
         c[i].type[1] = '\0';
 
         if (argc > 4 && std::string(argv[4]) == "true") {
-            c[i].r = 225 + rand() % 256;
-            c[i].g = 225 + rand() % 256;
-            c[i].b = 225 + rand() % 256;
+            c[i].r = genRand(50, 255, gen);
+            c[i].g = genRand(50, 255, gen);
+            c[i].b = genRand(50, 255, gen);
         } else {
             c[i].r = 0;
             c[i].g = 255;
@@ -75,20 +80,20 @@ int main(int argc, char* argv[]) {
 
                         if (c[i].delay <= 0) {
                             c[i].y += 8;
-                            c[i].type[0] = { 32 + rand() % 95 };
+                            c[i].type[0] = { genRand(32, 127, gen) };
                             c[i].delay = 1;
                         } else {
                             c[i].delay -= GetFrameTime() * c[i].speed;
                         }
 
                         if (c[i].y - 8 > RHEIGHT) {
-                            c[i].x = grid.x[rand() % RWIDTH / 8];
-                            c[i].y = grid.y[rand() % RHEIGHT / 8] - RHEIGHT;
+                            c[i].x = grid.x[genRand(0, RWIDTH / 8, gen)];
+                            c[i].y = grid.y[genRand(0, RHEIGHT / 8, gen)] - RHEIGHT;
 
                             if (argc > 4 && std::string(argv[4]) == "true") {
-                                c[i].r = 225 + rand() % 256;
-                                c[i].g = 225 + rand() % 256;
-                                c[i].b = 225 + rand() % 256;
+                                c[i].r = genRand(50, 255, gen);
+                                c[i].g = genRand(50, 255, gen);
+                                c[i].b = genRand(50, 255, gen);
                             }
                         }
                     }
