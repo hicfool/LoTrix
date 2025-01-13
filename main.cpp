@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
         c[i].delay = 1;
         c[i].type[0] = { 32 + rand() % 95 };
         c[i].type[1] = '\0';
-        c[i].tail = 3 + rand() % 8;
+        c[i].tail = 2 + rand() % 8;
 
         if (argc > 4 && std::string(argv[4]) == "true") {
             c[i].r = rand() % 256;
@@ -65,31 +65,35 @@ int main(int argc, char* argv[]) {
 
         BeginTextureMode(surface);
                 if (!paused) {
-                    ClearBackground(Color { 0, 0, 0, 100 });
+                    ClearBackground(Color { 0, 0, 0, 25 });
 
                     for (int i = 0; i < MAX; i++) {
+                        DrawRectangle(c[i].x, c[i].y, 7, 7, Color { 0, 0, 0, 255 });
+                        DrawRectangle(c[i].x, c[i].y, 7, 7, Color { c[i].r, c[i].g, c[i].b, 20 * c[i].tail });
+
                         for (int j = 0; j < c[i].tail; j++) {
+                            DrawRectangle(c[i].x, c[i].y - 8 - j * 8, 7, 7, Color { 0, 0, 0, 255 });
                             DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y - 8 - j * 8 }, 8, 0, Color { c[i].r, c[i].g, c[i].b, std::clamp(255 - j * 32, 0, 255) });
-                            DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y }, 8, 0, WHITE);
                         }
 
+                        DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y }, 8, 0, WHITE);
                         c[i].delay -= GetFrameTime() * c[i].speed;
 
                         if (c[i].delay <= 0) {
                             c[i].y += 8;
                             c[i].type[0] = { 32 + rand() % 95 };
                             c[i].delay = 1;
-
-                            if (argc > 2 && std::string(argv[2]) == "true") {
-                                c[i].r = rand() % 256;
-                                c[i].g = rand() % 256;
-                                c[i].b = rand() % 256;
-                            }
                         }
 
                         if (c[i].y - c[i].tail * 8 + 8 > RHEIGHT) {
                             c[i].x = grid.x[rand() % RWIDTH / 8];
                             c[i].y = grid.y[rand() % RHEIGHT / 8] - RHEIGHT;
+
+                            if (argc > 4 && std::string(argv[4]) == "true") {
+                                c[i].r = rand() % 256;
+                                c[i].g = rand() % 256;
+                                c[i].b = rand() % 256;
+                            }
                         }
                     }
                 }
