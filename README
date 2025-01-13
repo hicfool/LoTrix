@@ -1,0 +1,9 @@
+"LoTrix" - Lofi Matrix Effect
+
+Decided to make this fun little thing just to learn a bit of C++ and Raylib.
+Still a noob at it but I will get there (eventually).
+
+It takes 3 arguments atm:
+    ./LoTrix [amount] [rainbow] [size] ---> Default is 128.
+                 |        \_.> Default is false (can only be set to true).
+                 '-> Default is 32.
