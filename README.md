@@ -18,8 +18,8 @@ Font made by me.
 
 Rainbow -> false:
 ```
-![image](preview1.png)
+![img](preview1.png)
 ```
 Rainbow -> true:
 ```
-![image](preview2.png)
+![img](preview2.png)
