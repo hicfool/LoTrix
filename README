@@ -6,5 +6,5 @@ Font made by me.
 
 It takes 3 arguments atm:
     ./LoTrix [amount] [rainbow] [size] ---> Default is 128.
-                 |        \_.> Default is false (can only be set to true).
-                 '-> Default is 32.
+                |         \_.-> Default is false (can only be set to true).
+                '-> Default is [size] / 4 (32).
