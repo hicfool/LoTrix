@@ -9,7 +9,8 @@
 #define HI(a, b) (a > b) ? a : b
 
 int main(int argc, char* argv[]) {
-    const int RWIDTH = (argc < 4) ? 128 : atoi(argv[3]), RHEIGHT = RWIDTH;
+    const int RWIDTH = (argc > 1) ? atoi(argv[1]) : 128;
+    const int RHEIGHT = (argc > 2) ? atoi(argv[2]) : 128;
     int windowWidth = 600, windowHeight = windowWidth;
     bool paused = false;
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
@@ -21,8 +22,13 @@ int main(int argc, char* argv[]) {
     srand(time(NULL));
 
     struct Grid { std::vector<int>x, y; }; struct Grid grid;
-    for (int i = 0; i < RWIDTH / 8; i++) { grid.x.push_back(i * 8); grid.y.push_back(i * 8); }
-    const int MAX = (argc < 2) ? RWIDTH / 4 : atoi(argv[1]);
+    for (int i = 0; i < RWIDTH / 8; i++) {
+        grid.x.push_back(i * 8);
+        for (int j = 0; j < RHEIGHT / 8; j++) {
+            grid.y.push_back(j * 8);
+        }
+    }
+    const int MAX = (argc > 3) ? atoi(argv[3]) : HI(RWIDTH, RHEIGHT) / 4;
 
     struct C {
         float x, y, speed, delay;
@@ -39,7 +45,7 @@ int main(int argc, char* argv[]) {
         c[i].type[1] = '\0';
         c[i].tail = 3 + rand() % 8;
 
-        if (argc > 2 && std::string(argv[2]) == "true") {
+        if (argc > 4 && std::string(argv[4]) == "true") {
             c[i].r = rand() % 256;
             c[i].g = rand() % 256;
             c[i].b = rand() % 256;
