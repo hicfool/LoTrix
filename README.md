@@ -13,3 +13,13 @@ Font made by me.
     KEY_SPACE/KEY_P ---> Pause/unpause.
     KEY_F -------------> Toggle fullscreen.
 ```
+```
+(Both were 512x288 with 128 [max_amount] on a 1920x1080 screen).
+
+Rainbow -> false:
+```
+![img](preview1.png)
+```
+Rainbow -> true:
+```
+![img](preview2.png)
