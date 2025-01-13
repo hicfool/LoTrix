@@ -11,10 +11,10 @@ Font made by me.
                   '-------'---> Default is 128x128.
 - Keybinds:
     KEY_SPACE/KEY_P ---> Pause/unpause.
-    KEY_F -------------> Toggle fullscreen
+    KEY_F -------------> Toggle fullscreen.
 ```
 ```
-(Both were 512x288 with 128 [max_amount] on a 1920x1080 screen)
+(Both were 512x288 with 128 [max_amount] on a 1920x1080 screen).
 
 Rainbow -> false:
 ```
