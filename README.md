@@ -12,8 +12,16 @@ Font made by me.
 - Keybinds:
     KEY_SPACE/KEY_P ---> Pause/unpause.
     KEY_F -------------> Toggle fullscreen
-- Previews:
-    These were running the following args on a 1920x1080 screen -> (512 288 128 true).
+```
+```
+Previews:
+    These were running 512x288 [widthxheight] with 128 [max_amount] on a 1920x1080 screen.
+```
+```
+rainbow -> false
 ```
 ![image](preview1.png)
+```
+rainbow -> true
+```
 ![image](preview2.png)
