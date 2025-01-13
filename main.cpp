@@ -46,9 +46,9 @@ int main(int argc, char* argv[]) {
         c[i].type[1] = '\0';
 
         if (argc > 4 && std::string(argv[4]) == "true") {
-            c[i].r = rand() % 256;
-            c[i].g = rand() % 256;
-            c[i].b = rand() % 256;
+            c[i].r = 225 + rand() % 256;
+            c[i].g = 225 + rand() % 256;
+            c[i].b = 225 + rand() % 256;
         } else {
             c[i].r = 0;
             c[i].g = 255;
@@ -86,9 +86,9 @@ int main(int argc, char* argv[]) {
                             c[i].y = grid.y[rand() % RHEIGHT / 8] - RHEIGHT;
 
                             if (argc > 4 && std::string(argv[4]) == "true") {
-                                c[i].r = rand() % 256;
-                                c[i].g = rand() % 256;
-                                c[i].b = rand() % 256;
+                                c[i].r = 225 + rand() % 256;
+                                c[i].g = 225 + rand() % 256;
+                                c[i].b = 225 + rand() % 256;
                             }
                         }
                     }
