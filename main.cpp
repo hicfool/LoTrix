@@ -1,9 +1,9 @@
 #include <raylib.h>
+#include <vector>
 #include <stdlib.h>
+#include <time.h>
 #include <string>
 #include <algorithm>
-#include <time.h>
-#include <vector>
 
 #define LO(a, b) (a < b) ? a : b
 #define HI(a, b) (a > b) ? a : b
