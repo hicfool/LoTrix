@@ -1,3 +1,4 @@
+```
 "LoTrix" - Lofi Matrix Effect
 
 Decided to make this fun little thing just to learn a bit of C++ and Raylib.
@@ -13,5 +14,6 @@ Font made by me.
     KEY_F -------------> Toggle fullscreen
 - Previews:
     These were running the following args on a 1920x1080 screen -> (512 288 128 true).
+```
 ![image](preview1.png)
 ![image](preview2.png)
