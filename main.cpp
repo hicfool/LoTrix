@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
         c[i].delay = 1;
         c[i].type[0] = { 32 + rand() % 95 };
         c[i].type[1] = '\0';
-        c[i].tail = 4 + rand() % 8;
+        c[i].tail = 3 + rand() % 8;
 
         if (argc > 2 && std::string(argv[2]) == "true") {
             c[i].r = rand() % 256;
@@ -72,17 +72,17 @@ int main(int argc, char* argv[]) {
                             c[i].y += 8;
                             c[i].type[0] = { 32 + rand() % 95 };
                             c[i].delay = 1;
-                        }
-
-                        if (c[i].y - c[i].tail * 8 + 8 > RHEIGHT) {
-                            c[i].x = grid.x[rand() % RWIDTH / 8];
-                            c[i].y = grid.y[rand() % RHEIGHT / 8] - RHEIGHT;
 
                             if (argc > 2 && std::string(argv[2]) == "true") {
                                 c[i].r = rand() % 256;
                                 c[i].g = rand() % 256;
                                 c[i].b = rand() % 256;
                             }
+                        }
+
+                        if (c[i].y - c[i].tail * 8 + 8 > RHEIGHT) {
+                            c[i].x = grid.x[rand() % RWIDTH / 8];
+                            c[i].y = grid.y[rand() % RHEIGHT / 8] - RHEIGHT;
                         }
                     }
                 }
