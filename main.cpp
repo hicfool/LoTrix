@@ -68,17 +68,17 @@ int main(int argc, char* argv[]) {
 
                     for (int i = 0; i < MAX; i++) {
                         DrawRectangle(c[i].x, c[i].y, 7, 7, Color { 0, 0, 0, 255 });
-                        DrawRectangle(c[i].x, c[i].y, 7, 7, Color { c[i].r, c[i].g, c[i].b, 25 + rand() % 50 });
                         DrawRectangle(c[i].x, c[i].y - 8, 7, 7, Color { 0, 0, 0, 255 });
+                        DrawRectangle(c[i].x, c[i].y, 7, 7, Color { c[i].r, c[i].g, c[i].b, 75 });
                         DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y - 8 }, 8, 0, Color { c[i].r, c[i].g, c[i].b, 255 });
                         DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y }, 8, 0, WHITE);
-
-                        c[i].delay -= GetFrameTime() * c[i].speed;
 
                         if (c[i].delay <= 0) {
                             c[i].y += 8;
                             c[i].type[0] = { 32 + rand() % 95 };
                             c[i].delay = 1;
+                        } else {
+                            c[i].delay -= GetFrameTime() * c[i].speed;
                         }
 
                         if (c[i].y - 8 > RHEIGHT) {
