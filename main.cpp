@@ -68,38 +68,38 @@ int main(int argc, char* argv[]) {
         HideCursor();
 
         BeginTextureMode(surface);
-                if (!paused) {
-                    ClearBackground(Color { 0, 0, 0, 25 });
+            if (!paused) {
+                ClearBackground(Color { 0, 0, 0, 25 });
 
-                    for (int i = 0; i < MAX; i++) {
-                        DrawRectangle(c[i].x, c[i].y, 7, 7, Color { 0, 0, 0, 255 });
-                        DrawRectangle(c[i].x, c[i].y - 8, 7, 7, Color { 0, 0, 0, 255 });
-                        DrawRectangle(c[i].x, c[i].y, 7, 7, Color { c[i].r, c[i].g, c[i].b, 75 });
-                        DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y - 8 }, 8, 0, Color { c[i].r, c[i].g, c[i].b, 255 });
-                        DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y }, 8, 0, WHITE);
+                for (int i = 0; i < MAX; i++) {
+                    DrawRectangle(c[i].x, c[i].y, 7, 7, Color { 0, 0, 0, 255 });
+                    DrawRectangle(c[i].x, c[i].y - 8, 7, 7, Color { 0, 0, 0, 255 });
+                    DrawRectangle(c[i].x, c[i].y, 7, 7, Color { c[i].r, c[i].g, c[i].b, 75 });
+                    DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y - 8 }, 8, 0, Color { c[i].r, c[i].g, c[i].b, 255 });
+                    DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y }, 8, 0, WHITE);
 
-                        if (c[i].delay <= 0) {
-                            c[i].y += 8;
-                            c[i].type[0] = { genRand(32, 127, gen) };
-                            c[i].delay = 1;
-                        } else {
-                            c[i].delay -= GetFrameTime() * c[i].speed;
-                        }
+                    if (c[i].delay <= 0) {
+                        c[i].y += 8;
+                        c[i].type[0] = { genRand(32, 127, gen) };
+                        c[i].delay = 1;
+                    } else {
+                        c[i].delay -= GetFrameTime() * c[i].speed;
+                    }
 
-                        if (c[i].y - 8 > RHEIGHT) {
-                            c[i].x = grid.x[genRand(0, RWIDTH / 8, gen)];
-                            c[i].y = grid.y[genRand(0, RHEIGHT / 8, gen)] - RHEIGHT;
+                    if (c[i].y - 8 > RHEIGHT) {
+                        c[i].x = grid.x[genRand(0, RWIDTH / 8, gen)];
+                        c[i].y = grid.y[genRand(0, RHEIGHT / 8, gen)] - RHEIGHT;
 
-                            if (argc > 4 && std::string(argv[4]) == "true") {
-                                c[i].r = genRand(50, 255, gen);
-                                c[i].g = genRand(50, 255, gen);
-                                c[i].b = genRand(50, 255, gen);
-                            }
+                        if (argc > 4 && std::string(argv[4]) == "true") {
+                            c[i].r = genRand(50, 255, gen);
+                            c[i].g = genRand(50, 255, gen);
+                            c[i].b = genRand(50, 255, gen);
                         }
                     }
-                } else {
-                    ClearBackground(Color { 0, 0, 0, 0 });
                 }
+            } else {
+                ClearBackground(Color { 0, 0, 0, 0 });
+            }
         EndTextureMode();
         BeginDrawing();
             DrawTexturePro(
