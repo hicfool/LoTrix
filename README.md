@@ -25,6 +25,6 @@ Rainbow -> true:
 ![img](preview2.png)
 ```
 512x288, 256 [max_amount] on a 1920x1080 screen (38MB~).
-Message test preview.
+Message test:
 ```
 ![img](previewmsg.png)
