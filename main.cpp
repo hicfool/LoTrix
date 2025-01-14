@@ -100,6 +100,10 @@ int main(int argc, char* argv[]) {
         EndTextureMode();
         BeginDrawing();
             DrawTexturePro(surface.texture, (Rectangle) { 0, 0, float(surface.texture.width), float(-surface.texture.height) }, (Rectangle) { (GetScreenWidth() - float(RWIDTH) * surfaceScale) / 2, (GetScreenHeight() - (float(RHEIGHT) * surfaceScale)) / 2, float(RWIDTH) * surfaceScale, float(RHEIGHT) * surfaceScale }, (Vector2) { 0, 0 }, 0, WHITE);
+            DrawRectangle(0, 0, GetScreenWidth(), (GetScreenHeight() - RHEIGHT * surfaceScale) / 2, BLACK);
+            DrawRectangle(0, GetScreenHeight() - (GetScreenHeight() - RHEIGHT * surfaceScale) / 2, GetScreenWidth(), GetScreenHeight(), BLACK);
+            DrawRectangle(0, 0, (GetScreenWidth() - RWIDTH * surfaceScale) / 2, GetScreenHeight(), BLACK);
+            DrawRectangle(GetScreenWidth() - (GetScreenWidth() - RWIDTH * surfaceScale) / 2, 0, GetScreenWidth(), GetScreenHeight(), BLACK);
         EndDrawing();
 	}
 	UnloadRenderTexture(surface);
