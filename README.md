@@ -14,12 +14,17 @@ Font made by me.
     KEY_F -------------> Toggle fullscreen.
 ```
 ```
-Both are 512x288 with 128 [max_amount] on a 1920x1080 screen (35MB~).
-
+512x288, 128 [max_amount] on a 1920x1080 screen (35MB~).
 Rainbow -> false:
 ```
 ![img](preview1.png)
 ```
+512x288, 128 [max_amount] on a 1920x1080 screen (35MB~).
 Rainbow -> true:
 ```
 ![img](preview2.png)
+```
+512x288, 256 [max_amount] on a 1920x1080 screen (38MB~).
+Message test preview.
+```
+![img](previewmsg.png)
