@@ -91,7 +91,7 @@ int main(int argc, char* argv[]) {
                 }
 
                 if (argc > 5 && std::string(argv[5]).length() > 0) {
-                    DrawRectangle(RWIDTH / 2 - ((std::string(argv[5]).length() / 2) * 8) - 8, RHEIGHT / 2 - 16, std::string(argv[5]).length() * 8 + 8, 24, BLACK);
+                    DrawRectangle(RWIDTH / 2 - ((std::string(argv[5]).length() / 2) * 8) - 8, RHEIGHT / 2 - 16, std::string(argv[5]).length() * 8 + 16, 24, BLACK);
                     DrawTextEx(font, argv[5], (Vector2) { RWIDTH / 2 - ((std::string(argv[5]).length() / 2) * 8), RHEIGHT / 2 - 8 }, 8, 0, WHITE);
                 }
             } else {
