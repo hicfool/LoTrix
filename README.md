@@ -15,6 +15,7 @@ Font made by me.
 ```
 
 
+
 ```
 512x288, 128 [max_amount] on a 1920x1080 screen (35MB~).
 Rainbow -> false:
