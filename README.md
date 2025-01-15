@@ -34,6 +34,6 @@ Font made by me.
 ---
 ![](imgs/previewmsg.png)
 
-`LoTrix 512 288 256 true "This is a TEST... :3"`
+`LoTrix 512 288 256 true "This is a TEST!! :3"`
 
 (38MB~)
