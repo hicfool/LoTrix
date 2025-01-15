@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     for (int i = 0; i < MAX; i++) {
         c[i].x = grid.x[genRand(0, RWIDTH / 8, gen)];
         c[i].y = grid.y[genRand(0, RHEIGHT / 8, gen)] - RHEIGHT;
-        c[i].SPD = genRand(1, 4, gen);
+        c[i].SPD = genRand(1, 12, gen);
         c[i].type[0] = { genRand(32, 127, gen) };
         c[i].type[1] = '\0';
 
@@ -67,7 +67,7 @@ int main(int argc, char* argv[]) {
 
         BeginTextureMode(surface);
             if (!paused) {
-                ClearBackground(Color { 0, 0, 0, 25 });
+                ClearBackground(Color { 0, 0, 0, 24 });
 
                 for (int i = 0; i < MAX; i++) {
                     DrawRectangle(c[i].x, c[i].y, 7, 7, Color { 0, 0, 0, 255 });
@@ -77,7 +77,7 @@ int main(int argc, char* argv[]) {
                     DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y }, 8, 0, WHITE);
 
                     if (c[i].speed > 0) {
-                        c[i].speed -= GetFrameTime() * 60;
+                        c[i].speed -= GetFrameTime() * 240;
                     } else {
                         c[i].y += 8;
                         c[i].type[0] = { genRand(32, 127, gen) };
