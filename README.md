@@ -18,18 +18,17 @@ Font made by me.
 
 ## Images
 
+![](preview1.png)
 `./LoTrix 512 288 128 false`
 
 (35MB~).
 
-![](preview1.png)
+![](preview2.png)
 `./LoTrix 512 288 128 true`
 
 (35MB~).
 
-![](preview2.png)
+![](previewmsg.png)
 `./LoTrix 512 288 256 true`
 
 (38MB~)
-
-![](previewmsg.png)
