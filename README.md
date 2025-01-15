@@ -1,11 +1,10 @@
 # "LoTrix" - Lofi Matrix Effect
-___
 
 Decided to make this fun little thing just to learn a bit of C++ and Raylib.
 Still a noob at it but I will get there (eventually).
 Font made by me.
 
---
+---
 
 ### Arguments & defaults
   - `./LoTrix [width] [height] [max_amount] [rainbow] [message]`
