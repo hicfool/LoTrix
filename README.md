@@ -20,11 +20,17 @@ Font made by me.
 (On a 1920 by 1080 monitor).
 
 `./LoTrix 512 288 128 false`
+
 (35MB~).
+
 ![](preview1.png)
 `./LoTrix 512 288 128 true`
+
 (35MB~).
+
 ![](preview2.png)
 `./LoTrix 512 288 256 true`
+
 (38MB~)
+
 ![](previewmsg.png)
