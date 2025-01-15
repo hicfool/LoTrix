@@ -1,4 +1,4 @@
-# "LoTrix" - Lofi Matrix Effect
+# LoTrix - Lofi Matrix Effect
 
 Decided to make this fun little thing just to learn a bit of C++ and Raylib.
 
