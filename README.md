@@ -18,6 +18,7 @@ Font made by me.
 
 ## Images
 (On a 1920 by 1080 monitor).
+
 ![](preview1.png)
 `./LoTrix 512 288 128 false`
 (35MB~).
