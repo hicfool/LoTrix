@@ -22,14 +22,14 @@ Font made by me.
 
 `lotrix 512 288 128 false`
 
-(35MB~).
+(35MB~)
 
 ---
 ![](imgs/img1.png)
 
 `lotrix 512 288 128 true`
 
-(35MB~).
+(35MB~)
 
 ---
 ![](imgs/img2.png)
