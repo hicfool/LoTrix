@@ -5,8 +5,7 @@ Font made by me.
 ---
 
 ### Arguments & defaults
-- It takes 4 arguments atm:
-  `./LoTrix [width] [height] [max_amount] [rainbow] [message]`
+  - `./LoTrix [width] [height] [max_amount] [rainbow] [message]`
     -`[width]/[height]`: Width and height it'll be drawn at. Default is 128 by 128.
     -`[max_amount]`: Maximum amount of characters that will be created. Default is the highest value between `[width]` and `[height]` divided by 4 (128 / 4 = 32).
     -`[rainbow]`: Fun colors. Default is set to false.
@@ -18,9 +17,12 @@ Font made by me.
 
 ### Images
 (On a 1920 by 1080 monitor).
-[`./LoTrix 512 288 128 false`](preview1.png)
+![](preview1.png)
+`./LoTrix 512 288 128 false`
 (35MB~).
-[`./LoTrix 512 288 128 true`](preview2.png)
+![](preview2.png)
+`./LoTrix 512 288 128 true`
 (35MB~).
-[`./LoTrix 512 288 256 true`](previewmsg.png)
+![](previewmsg.png)
+`./LoTrix 512 288 256 true`
 (38MB~)
