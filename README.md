@@ -17,7 +17,6 @@ Font made by me.
   - `KEY_F` - Toggle fullscreen.
 
 ## Images
-(On a 1920 by 1080 monitor).
 
 `./LoTrix 512 288 128 false`
 
