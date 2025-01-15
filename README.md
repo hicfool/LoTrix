@@ -34,6 +34,6 @@ Font made by me.
 ---
 ![](imgs/img2.png)
 
-`lotrix.exe 512 288 256 true "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"`
+`lotrix 512 288 256 true "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"`
 
 (38MB~)
