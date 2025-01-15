@@ -18,21 +18,21 @@ Font made by me.
 
 ## Images
 
-![](imgs/preview1.png)
+![](imgs/img0.png)
 
 `lotrix 512 288 128 false`
 
 (35MB~).
 
 ---
-![](imgs/preview2.png)
+![](imgs/img1.png)
 
 `lotrix 512 288 128 true`
 
 (35MB~).
 
 ---
-![](imgs/previewmsg.png)
+![](imgs/img2.png)
 
 `lotrix 512 288 256 true "This is a TEST!! :3"`
 
