@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
     int windowWidth = 600, windowHeight = windowWidth;
     bool paused = false;
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
-	InitWindow(windowWidth, windowHeight, "LoTrix");
+	InitWindow(windowWidth, windowHeight, "Lotrix");
 	SetTargetFPS(60);
 	RenderTexture2D surface = LoadRenderTexture(RWIDTH, RHEIGHT);
 	SetTextureFilter(surface.texture, TEXTURE_FILTER_POINT);
