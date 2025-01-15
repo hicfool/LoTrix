@@ -6,7 +6,7 @@ Still a noob at it but I will get there (eventually).
 
 Font made by me.
 
-### Arguments & defaults
+## Arguments & defaults
   - `./LoTrix [width] [height] [max_amount] [rainbow] [message]`
     -`[width]/[height]`: Width and height it'll be drawn at. Default is 128 by 128.
     -`[max_amount]`: Maximum amount of characters that will be created. Default is the highest value between `[width]` and `[height]` divided by 4 (128 / 4 = 32).
@@ -16,7 +16,7 @@ Font made by me.
   -`KEY_SPACE/KEY_P` - Pause/unpause.
   -`KEY_F` - Toggle fullscreen.
 
-### Images
+## Images
 (On a 1920 by 1080 monitor).
 ![](preview1.png)
 `./LoTrix 512 288 128 false`
