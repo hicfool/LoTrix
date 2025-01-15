@@ -6,8 +6,6 @@ Still a noob at it but I will get there (eventually).
 
 Font made by me.
 
-~~~
-
 ### Arguments & defaults
   - `./LoTrix [width] [height] [max_amount] [rainbow] [message]`
     -`[width]/[height]`: Width and height it'll be drawn at. Default is 128 by 128.
