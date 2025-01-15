@@ -9,7 +9,7 @@ Font made by me.
 ## Arguments & Defaults
   - `lotrix [width] [height] [max_amount] [rainbow] [message]`
     - `[width]/[height]`: Width and height it'll be drawn at. Default is 128 by 128.
-    - `[max_amount]`: Maximum amount of characters that will be created. Default is the highest value between `[width]` and `[height]` divided by 4 (128 / 4 = 32).
+    - `[max_amount]`: Maximum amount of characters that will be created. Default is the highest value between width and height divided by 4 (128 / 4 = 32).
     - `[rainbow]`: Fun colors. Default is set to false.
     - `[message]`: Display a character or a whole message on the screen using "". Default is empty.
 - Keybinds:
