@@ -1,5 +1,6 @@
-<h1 align="center"># Lotrix - Lofi Matrix</h1>
+<h1 align="center">Lotrix</h1>
 <p align="center">
+Lofi Matrix
 Decided to make this fun little thing just to learn a bit of C and Raylib. Still a noob at it but I will get there (eventually).
 Font made by me.
 </p>
