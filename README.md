@@ -1,6 +1,6 @@
 # Lotrix - Lofi Matrix Effect
 
-Decided to make this fun little thing just to learn a bit of C++ and Raylib.
+Decided to make this fun little thing just to learn a bit of C and Raylib.
 
 Still a noob at it but I will get there (eventually).
 
