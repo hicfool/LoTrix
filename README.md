@@ -2,7 +2,7 @@
 <p align="center"> Lofi Matrix effect written in C + Raylib.<br>Font made by me.</p>
 
 ![](demos/demo0.png)
-<p align="center">`./lotrix 512 288 128 false`<br>(35MB~)</p>
+<center>`./lotrix 512 288 128 false`<br>(35MB~)</center>
 
 ## Features
 - Arguments & defaults:
