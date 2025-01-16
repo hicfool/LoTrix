@@ -1,6 +1,7 @@
 <h1 align="center">Lotrix</h1>
 <p align="center">
 Lofi Matrix effect written in C + Raylib.
+  
 Font made by me.
 </p>
 
