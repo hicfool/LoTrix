@@ -14,21 +14,21 @@
 
 ## Demos
 
-![](imgs/demo0.png)
+![](demos/demo0.png)
 
 `./lotrix 512 288 128 false`
 
 (35MB~)
 
 ---
-![](imgs/demo1.png)
+![](demos/demo1.png)
 
 `./lotrix 512 288 128 true`
 
 (35MB~)
 
 ---
-![](imgs/demo2.png)
+![](demos/demo2.png)
 
 `./lotrix 512 288 256 true "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"`
 
