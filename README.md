@@ -1,4 +1,4 @@
-# Lotrix - Lofi Matrix Effect
+# Lotrix - Lofi Matrix
 
 Decided to make this fun little thing just to learn a bit of C and Raylib.
 
