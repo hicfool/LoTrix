@@ -5,9 +5,7 @@
 #define LO(a, b) (a < b) ? a : b
 #define HI(a, b) (a > b) ? a : b
 
-int genRand(int min, int max) {
-    return min + rand() % (max - min + 1);
-}
+int genRand(int min, int max) { return min + rand() % (max - min + 1); }
 
 int main(int argc, char* argv[]) {
     const int RWIDTH = (argc > 1) ? atoi(argv[1]) : 128, RHEIGHT = (argc > 2) ? atoi(argv[2]) : 128;
@@ -21,12 +19,8 @@ int main(int argc, char* argv[]) {
     Font font = LoadFont("font.png");
 
     struct Grid { int x[RWIDTH / 8], y[RHEIGHT / 8]; }; struct Grid grid;
-    for (int i = 0; i < RWIDTH / 8; i++) {
-        grid.x[i] = i * 8;
-        for (int j = 0; j < RHEIGHT / 8; j++) {
-            grid.y[j] = j * 8;
-        }
-    }
+    for (int i = 0; i < RWIDTH / 8; i++) { grid.x[i] = i * 8; }
+    for (int i = 0; i < RHEIGHT / 8; i++) { grid.y[i] = i * 8; }
 
     const int MAX = (argc > 3) ? atoi(argv[3]) : HI(RWIDTH / 4, RHEIGHT / 4);
 
@@ -71,9 +65,8 @@ int main(int argc, char* argv[]) {
                     DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y - 8 }, 8, 0, (Color) { c[i].r, c[i].g, c[i].b, 255 });
                     DrawTextEx(font, c[i].type, (Vector2) { c[i].x, c[i].y }, 8, 0, WHITE);
 
-                    if (c[i].speed > 0) {
-                        c[i].speed -= GetFrameTime() * 240;
-                    } else {
+                    if (c[i].speed > 0) { c[i].speed -= GetFrameTime() * 240; }
+                    else {
                         c[i].y += 8;
                         c[i].type[0] = genRand(32, 127);
                         c[i].speed = c[i].SPD;
