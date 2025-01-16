@@ -1,7 +1,7 @@
 <h1 align="center">Lotrix</h1>
 <p align="center"> Lofi Matrix effect written in C + Raylib.<br>Font made by me.</p>
 
-## How To Use
+## Features
 - Arguments & defaults:
   - `./lotrix [width] [height] [max_amount] [rainbow] [message]`
     - `[width]/[height]`: Width and height it'll be drawn at. Default is 128 by 128.
@@ -12,23 +12,23 @@
   - `KEY_SPACE/KEY_P` - Pause/unpause.
   - `KEY_F` - Toggle fullscreen.
 
-## Images
+## Demos
 
-![](imgs/img0.png)
+![](imgs/demo0.png)
 
 `./lotrix 512 288 128 false`
 
 (35MB~)
 
 ---
-![](imgs/img1.png)
+![](imgs/demo1.png)
 
 `./lotrix 512 288 128 true`
 
 (35MB~)
 
 ---
-![](imgs/img2.png)
+![](imgs/demo2.png)
 
 `./lotrix 512 288 256 true "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"`
 
