@@ -2,7 +2,6 @@
 <p align="center">
 Lofi Matrix effect written in C + Raylib.
 
-Decided to make this fun little thing just to learn a bit of C and Raylib. Still a noob at it but I will get there (eventually).
 Font made by me.
 </p>
 
