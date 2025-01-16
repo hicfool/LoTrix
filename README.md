@@ -2,7 +2,7 @@
 <p align="center"> Lofi Matrix effect written in C + Raylib.<br>Font made by me.</p>
 
 ![](demos/demo0.png)
-<p align="center">Lotrix at 512x288<br>(35MB~)</p>
+<p align="center">Lotrix at 512x288.<br>(35MB~)</p>
 
 ## Features
 - Arguments & defaults:
@@ -16,23 +16,8 @@
   - `KEY_F` - Toggle fullscreen.
 
 ## Demos
-
-![](demos/demo0.png)
-
-`./lotrix 512 288 128 false`
-
-(35MB~)
-
----
 ![](demos/demo1.png)
+<p align="center">Lotrix at 512x288 & rainbow set to true.<br>(35MB~)</p>
 
-`./lotrix 512 288 128 true`
-
-(35MB~)
-
----
 ![](demos/demo2.png)
-
-`./lotrix 512 288 256 true "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"`
-
-(38MB~)
+<p align="center">Lotrix at 512x288, 256 characters, rainbow set to true & displaying a message.<br>(38MB~)</p>
