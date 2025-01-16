@@ -4,15 +4,16 @@
 
 #define LO(a, b) (a < b) ? a : b
 #define HI(a, b) (a > b) ? a : b
+#define WWIDTH 600
+#define WHEIGHT 600
 
 int genRand(int min, int max) { return min + rand() % (max - min + 1); }
 
 int main(int argc, char* argv[]) {
     const int RWIDTH = (argc > 1) ? atoi(argv[1]) : 128, RHEIGHT = (argc > 2) ? atoi(argv[2]) : 128;
-    int windowWidth = 600, windowHeight = windowWidth;
     bool paused = false;
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
-	InitWindow(windowWidth, windowHeight, "Lotrix");
+	InitWindow(WWIDTH, WHEIGHT, "Lotrix");
 	SetTargetFPS(60);
 	RenderTexture2D surface = LoadRenderTexture(RWIDTH, RHEIGHT);
 	SetTextureFilter(surface.texture, TEXTURE_FILTER_POINT);
@@ -82,10 +83,9 @@ int main(int argc, char* argv[]) {
                     DrawRectangle(RWIDTH / 2 - ((strlen(argv[5]) / 2) * 8) - 8, RHEIGHT / 2 - 16, strlen(argv[5]) * 8 + 16, 24, BLACK);
                     DrawTextEx(font, argv[5], (Vector2) { RWIDTH / 2 - ((strlen(argv[5]) / 2) * 8), RHEIGHT / 2 - 8 }, 8, 0, WHITE);
                 }
-            } else {
-                ClearBackground((Color) { 0, 0, 0, 0 });
-            }
+            } else { ClearBackground((Color) { 0, 0, 0, 0 }); }
         EndTextureMode();
+
         BeginDrawing();
             DrawTexturePro(surface.texture, (Rectangle) { 0, 0, (float)surface.texture.width, (float)-surface.texture.height }, (Rectangle) { (GetScreenWidth() - (float)RWIDTH * surfaceScale) / 2, (GetScreenHeight() - ((float)RHEIGHT * surfaceScale)) / 2, (float)RWIDTH * surfaceScale, (float)RHEIGHT * surfaceScale }, (Vector2) { 0, 0 }, 0, WHITE);
             DrawRectangle(0, 0, GetScreenWidth(), (GetScreenHeight() - RHEIGHT * surfaceScale) / 2, BLACK);
@@ -94,6 +94,7 @@ int main(int argc, char* argv[]) {
             DrawRectangle(GetScreenWidth() - (GetScreenWidth() - RWIDTH * surfaceScale) / 2, 0, GetScreenWidth(), GetScreenHeight(), BLACK);
         EndDrawing();
 	}
+
 	UnloadRenderTexture(surface);
     UnloadFont(font);
 	CloseWindow();
