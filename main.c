@@ -10,7 +10,7 @@
 int genRand(int min, int max) { return min + rand() % (max - min + 1); }
 
 int main(int argc, char* argv[]) {
-    const int RWIDTH = (argc > 1) ? atoi(argv[1]) : 128, RHEIGHT = (argc > 2) ? atoi(argv[2]) : 128;
+    const int RWIDTH = (argc > 1) ? atoi(argv[1]) : 128, RHEIGHT = (argc > 2) ? atoi(argv[2]) : RWIDTH;
     bool paused = false;
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 	InitWindow(WWIDTH, WHEIGHT, "Lotrix");
