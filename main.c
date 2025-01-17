@@ -35,8 +35,7 @@ int main(int argc, char* argv[]) {
         c[i].x = grid.x[genRand(0, RWIDTH / 8)];
         c[i].y = grid.y[genRand(0, RHEIGHT / 8)] - RHEIGHT;
         c[i].SPD = genRand(1, 12);
-        c[i].type[0] = genRand(32, 127);
-        c[i].type[1] = '\0';
+        c[i].type = { genRand(32, 127), '\0' };
 
         if (argc > 4 && strcmp(argv[4], "true") == 0) {
             c[i].r = genRand(50, 255);
